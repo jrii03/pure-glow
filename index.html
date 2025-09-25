@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureGlow Essentials - Brightening Vitamin C Serum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: '#A3B18A',
+                        peach: '#F2C6A3',
+                        darkGreen: '#344E41',
+                        ivory: '#FEFAE0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for floating CTA -->
+    <style>
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .floating-cta:hover {
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            .floating-cta {
+                bottom: 80px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-darkGreen bg-ivory overflow-x-hidden">
+
+<!-- Floating CTA Button -->
+<div class="floating-cta">
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum%20dengan%20diskon%20spesial"
+       target="_blank"
+       class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-2xl transition transform hover:scale-110">
+        <i class="fab fa-whatsapp text-xl mr-2"></i>
+        <span class="hidden sm:inline">Beli Sekarang</span>
+        <span class="sm:hidden">Beli</span>
+    </a>
+</div>
+
+<!-- Navbar -->
+<header class="fixed w-full bg-ivory z-50 shadow-sm">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Left Column: Logo -->
+            <div class="flex items-center">
+                <a href="#home">
+                    <h1 class="text-2xl font-serif font-bold text-darkGreen">PureGlow<span class="text-sage">Essentials</span></h1>
+                </a>
+            </div>
+
+            <!-- Right Column: Menu + CTA -->
+            <div class="flex items-center">
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 mr-6">
+                    <a href="#product" class="text-darkGreen hover:text-sage transition text-sm font-medium">Produk</a>
+                    <a href="#testimonials" class="text-darkGreen hover:text-sage transition text-sm font-medium">Testimoni</a>
+                    <a href="#footer" class="text-darkGreen hover:text-sage transition text-sm font-medium">Kontak</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum%20dengan%20diskon%20spesial"
+                       target="_blank"
+                       class="bg-peach hover:bg-opacity-90 text-darkGreen font-bold py-2 px-6 rounded-full transition transform hover:scale-105 text-sm whitespace-nowrap relative">
+                        <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">-10%</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-darkGreen p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-ivory py-4 px-4 absolute w-full left-0 right-0 shadow-lg mt-2 rounded-b-xl">
+            <div class="flex flex-col space-y-4">
+                <a href="#product" class="text-darkGreen hover:text-sage transition py-2 font-medium">Produk</a>
+                <a href="#testimonials" class="text-darkGreen hover:text-sage transition py-2 font-medium">Testimoni</a>
+                <a href="#footer" class="text-darkGreen hover:text-sage transition py-2 font-medium">Kontak</a>
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum%20dengan%20diskon%20spesial"
+                   target="_blank"
+                   class="bg-peach hover:bg-opacity-90 text-darkGreen font-bold py-3 px-6 rounded-full transition text-center mt-2 relative">
+                    <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang - Hemat 10%
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content (Sections will be added here) -->
+    <main>
+        <!-- Sections will be added sequentially as instructed -->
+
+        <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden" data-aos="fade-right">
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Text Content - Lebih fokus -->
+                    <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-darkGreen mb-6 leading-tight">
+                            Hilangkan Noda Hitam<br>
+                            <span class="text-sage">Dalam 4 Minggu!</span>
+                        </h1>
+
+                        <p class="text-lg text-darkGreen mb-6 max-w-lg">
+                            <strong>Vitamin C Serum</strong> dengan formula 10% Vitamin C alami yang terbukti mencerahkan kulit dan menghilangkan noda hitam secara permanen
+                        </p>
+                        
+                        <!-- Harga dan Diskon -->
+                        <div class="flex items-center mb-8">
+                            <span class="text-2xl font-bold text-sage mr-4">Rp 185.000</span>
+                            <span class="text-gray-500 line-through">Rp 205.000</span>
+                            <span class="bg-peach text-darkGreen text-xs font-bold px-2 py-1 rounded ml-4">Hemat 10%</span>
+                        </div>
+                        
+                        <!-- CTA Utama -->
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum" 
+                               target="_blank"
+                               class="bg-peach hover:bg-opacity-90 text-darkGreen font-medium py-4 px-8 rounded-full transition transform hover:scale-105 shadow-lg text-center">
+                                <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang - Diskon 10%
+                            </a>
+                        </div>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center gap-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-sage mr-2"></i>
+                                <span class="text-sm font-medium">Garansi 30 Hari</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-truck text-sage mr-2"></i>
+                                <span class="text-sm font-medium">Gratis Ongkir</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-sage mr-2"></i>
+                                <span class="text-sm font-medium">BPOM Terdaftar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Image -->
+                    <div class="md:w-1/2 flex justify-center relative">
+                        <div class="relative">
+                            <div class="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+                                    <img src="assets/produk3.jpeg" alt="">
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <h3 class="font-bold text-darkGreen">Brightening Vitamin C Serum</h3>
+                                    <div class="flex justify-center items-center mt-2">
+                                        <div class="flex text-yellow-400 mr-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-darkGreen text-sm">4.9 (1.2K ulasan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Product Section -->
+<section id="product" class="py-16 bg-ivory">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="font-serif text-3xl font-bold text-darkGreen mb-4">
+                Produk Unggulan Kami
+            </h2>
+            <p class="text-darkGreen max-w-2xl mx-auto">
+                Formulasi alami yang dirancang untuk memberikan hasil maksimal tanpa kompromi pada kesehatan kulit Anda
+            </p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Product Card 1 - Featured Product -->
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed w-full h-64 flex items-center justify-center">
+                        <img src="assets/produk3.jpeg" alt="">
+                    </div>
+                    <div class="absolute top-4 left-4 bg-peach text-darkGreen text-xs font-bold px-3 py-1 rounded-full">
+                        TERLARIS
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum"
+                           target="_blank"
+                           class="bg-peach text-darkGreen font-medium py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-darkGreen text-lg mb-2 group-hover:text-sage transition-colors">
+                        Brightening Vitamin C Serum
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                        Mengurangi noda hitam, mencerahkan kulit, dan melindungi dari radikal bebas dengan formula 10% Vitamin C alami.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sage font-bold text-lg">Rp 185.000</span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <span class="text-darkGreen text-sm ml-1">4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed w-full h-64 flex items-center justify-center">
+                        <img src="assets/produk2.jpeg" alt="">
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Hyaluronic%20Acid%20Essence"
+                           target="_blank"
+                           class="bg-peach text-darkGreen font-medium py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-darkGreen text-lg mb-2 group-hover:text-sage transition-colors">
+                        Hydrating Hyaluronic Acid Essence
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                        Intensif melembapkan kulit hingga 24 jam dengan molekul hyaluronic acid berat molekul rendah.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sage font-bold text-lg">Rp 165.000</span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <span class="text-darkGreen text-sm ml-1">4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed w-full h-64 flex items-center justify-center">
+                        <img src="assets/produk4.jpeg" alt="">
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Daily%20Defense%20SPF%2050"
+                           target="_blank"
+                           class="bg-peach text-darkGreen font-medium py-2 px-6 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i>Beli Sekarang
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-bold text-darkGreen text-lg mb-2 group-hover:text-sage transition-colors">
+                        Daily Defense SPF 50+
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">
+                        Perlindungan broad spectrum dengan tekstur ringan yang tidak meninggalkan white cast pada semua jenis kulit.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sage font-bold text-lg">Rp 175.000</span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            <span class="text-darkGreen text-sm ml-1">4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Products Button -->
+        <div class="text-center" data-aos="fade-up">
+            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20melihat%20semua%20produk%20PureGlow%20Essentials"
+               target="_blank"
+               class="border-2 border-sage text-sage hover:bg-sage hover:text-ivory font-medium py-3 px-8 rounded-full transition">
+                Lihat Semua Produk
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Gabungkan Why Us + Ingredients menjadi satu section yang lebih ringkas -->
+<section id="benefits" class="py-16 md:py-24 bg-ivory">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-darkGreen mb-4">
+                Mengapa PureGlow Essentials?
+            </h2>
+            <p class="text-darkGreen max-w-2xl mx-auto">
+                Solusi lengkap untuk kulit cerah dan sehat secara alami
+            </p>
+        </div>
+        
+        <!-- Benefits Grid (4 key points only) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 bg-sage bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-leaf text-sage"></i>
+                </div>
+                <h3 class="font-bold text-darkGreen mb-2">100% Alami</h3>
+                <p class="text-gray-600 text-sm">Tanpa bahan kimia keras</p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 bg-sage bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-certificate text-sage"></i>
+                </div>
+                <h3 class="font-bold text-darkGreen mb-2">Teruji</h3>
+                <p class="text-gray-600 text-sm">BPOM & Halal Certified</p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 bg-sage bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-star text-sage"></i>
+                </div>
+                <h3 class="font-bold text-darkGreen mb-2">Terbukti</h3>
+                <p class="text-gray-600 text-sm">98% kepuasan pelanggan</p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-12 h-12 bg-sage bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shipping-fast text-sage"></i>
+                </div>
+                <h3 class="font-bold text-darkGreen mb-2">Cepat</h3>
+                <p class="text-gray-600 text-sm">Gratis ongkir & garansi</p>
+            </div>
+        </div>
+        
+        <!-- Key Ingredients Highlight -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up">
+            <h3 class="font-bold text-darkGreen text-xl text-center mb-6">Formula Unggulan</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-sage bg-opacity-10 text-sage px-4 py-2 rounded-full text-sm">Vitamin C 10%</span>
+                <span class="bg-sage bg-opacity-10 text-sage px-4 py-2 rounded-full text-sm">Hyaluronic Acid</span>
+                <span class="bg-sage bg-opacity-10 text-sage px-4 py-2 rounded-full text-sm">Niacinamide</span>
+                <span class="bg-sage bg-opacity-10 text-sage px-4 py-2 rounded-full text-sm">Aloe Vera</span>
+                <span class="bg-sage bg-opacity-10 text-sage px-4 py-2 rounded-full text-sm">Green Tea</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials dengan Rating dan Jumlah -->
+<section id="testimonials" class="py-16 bg-sage bg-opacity-10">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="flex justify-center items-center mb-4">
+                <div class="flex text-yellow-400 text-2xl mr-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="text-3xl font-bold text-darkGreen">4.9</span>
+                <span class="text-gray-600 ml-2">dari 1.200+ ulasan</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold text-darkGreen mb-4">
+                Apa Kata Pengguna Kami
+            </h2>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm mb-4 group-hover:text-darkGreen transition-colors">
+                    "Akhirnya menemukan serum yang benar-benar bekerja. Noda hitam memudar dan tekstur kulit jadi halus!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-peach rounded-full flex items-center justify-center mr-3">
+                        <span class="text-darkGreen text-sm font-bold">DS</span>
+                    </div>
+                    <div>
+                        <span class="text-darkGreen text-sm font-medium">Dewi Santoso</span>
+                        <p class="text-gray-500 text-xs">Bandung</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-600 text-sm mb-4 group-hover:text-darkGreen transition-colors">
+                    "Tekstur ringan dan tidak membuat kulit berminyak. Sangat cocok untuk kulit kombinasi saya!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-sage rounded-full flex items-center justify-center mr-3">
+                        <span class="text-ivory text-sm font-bold">MP</span>
+                    </div>
+                    <div>
+                        <span class="text-darkGreen text-sm font-medium">Maya Pratiwi</span>
+                        <p class="text-gray-500 text-xs">Surabaya</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 text-sm mb-4 group-hover:text-darkGreen transition-colors">
+                    "Setelah pakai 2 bulan, kulit terasa lebih kenyal dan tidak mudah kusam lagi. Produknya ampuh!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-peach rounded-full flex items-center justify-center mr-3">
+                        <span class="text-darkGreen text-sm font-bold">AL</span>
+                    </div>
+                    <div>
+                        <span class="text-darkGreen text-sm font-medium">Anita Lestari</span>
+                        <p class="text-gray-500 text-xs">Yogyakarta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA di tengah testimonials -->
+        <div class="text-center mb-12" data-aos="zoom-in">
+            <div class="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+                <h3 class="font-bold text-darkGreen text-xl mb-4">Bergabung dengan 10.000+ Pelanggan Puas!</h3>
+                <p class="text-gray-600 mb-6">Dapatkan kulit cerah dan sehat seperti mereka</p>
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum%20dengan%20diskon%2010%25"
+                   target="_blank"
+                   class="inline-flex items-center bg-peach hover:bg-opacity-90 text-darkGreen font-bold py-4 px-8 rounded-full transition transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                    <span>Beli Sekarang - Hemat 10%</span>
+                </a>
+                <p class="text-xs text-gray-500 mt-3">
+                    <i class="fas fa-clock mr-1"></i>Penawaran terbatas • Gratis ongkir • Garansi 30 hari
+                </p>
+            </div>
+        </div>
+        <!-- Trust Badges -->
+        <div class="text-center pt-16" data-aos="fade-up">
+            <div class="flex flex-wrap justify-center items-center gap-8 mb-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-sage mb-2">98%</div>
+                    <div class="text-darkGreen text-sm">Tingkat Kepuasan</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-sage mb-2">10K+</div>
+                    <div class="text-darkGreen text-sm">Pelanggan Aktif</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-sage mb-2">4.9/5</div>
+                    <div class="text-darkGreen text-sm">Rating Rata-rata</div>
+                </div>
+            </div>
+            
+            <div class="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-md">
+                <i class="fas fa-shield-alt text-sage mr-2"></i>
+                <span class="text-darkGreen font-medium">Garansi Uang Kembali 30 Hari</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 md:py-24 bg-gradient-to-br from-sage to-darkGreen text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+            <!-- Urgency Badge -->
+            <div class="inline-flex items-center bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+                <i class="fas fa-fire mr-2"></i>
+                PENAWARAN TERBATAS - BERAKHIR DALAM 24 JAM!
+            </div>
+
+            <!-- Section Header -->
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">
+                Jangan Sia-siakan Kesempatan Ini!
+            </h2>
+            <p class="text-lg mb-8 opacity-90">
+                Bergabunglah dengan 10.000+ wanita yang sudah merasakan kulit cerah dan sehat
+            </p>
+
+            <!-- Offer Box -->
+            <div class="bg-white text-darkGreen rounded-2xl p-8 mb-8 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-left">
+                        <h3 class="font-bold text-xl mb-4">Paket Hemat Hari Ini:</h3>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>1x Vitamin C Serum (30ml)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>Gratis Ongkir ke Seluruh Indonesia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>Garansi Uang Kembali 30 Hari</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span>Konsultasi Gratis dengan Ahli</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center mb-4">
+                            <span class="text-3xl font-bold text-sage mr-4">Rp 185.000</span>
+                            <span class="text-gray-500 line-through text-lg">Rp 205.000</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-peach rounded-xl p-6 mb-4">
+                            <div class="text-2xl font-bold text-darkGreen mb-2">HEMAT</div>
+                            <div class="text-3xl font-bold text-darkGreen">Rp 20.000</div>
+                        </div>
+                        <p class="text-sm text-gray-600">*Hanya untuk 100 pembeli pertama</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Vitamin%20C%20Serum%20dengan%20diskon%20spesial%20hari%20ini"
+                   target="_blank"
+                   class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition transform hover:scale-105 shadow-lg text-lg">
+                    <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                    <span>BELI SEKARANG - HEMAT Rp 20.000</span>
+                </a>
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20produk%20Vitamin%20C%20Serum"
+                   target="_blank"
+                   class="inline-flex items-center bg-white text-darkGreen font-medium py-4 px-8 rounded-full transition transform hover:scale-105 shadow-lg border-2 border-white">
+                    <i class="fas fa-comments mr-3"></i>
+                    <span>Konsultasi Gratis</span>
+                </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm opacity-90">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    <span>Pembayaran Aman</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-truck mr-2"></i>
+                    <span>Pengiriman Cepat</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>Respon 1 Jam</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-users mr-2"></i>
+                    <span>10.000+ Pelanggan Puas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer id="footer" class="bg-darkGreen text-ivory pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">PureGlow<span class="text-sage">Essentials</span></h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Skincare alami untuk kulit sehat dan bercahaya.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-300 hover:text-sage text-sm">Kebijakan Privasi</a>
+                        <span class="text-gray-500">|</span>
+                        <a href="#" class="text-gray-300 hover:text-sage text-sm">Syarat & Ketentuan</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>hello@pureglow.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Sertifikasi</h4>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <i class="fas fa-certificate text-sage text-xl mb-1"></i>
+                            <p class="text-gray-300 text-xs">BPOM</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-certificate text-sage text-xl mb-1"></i>
+                            <p class="text-gray-300 text-xs">Halal</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-heart text-sage text-xl mb-1"></i>
+                            <p class="text-gray-300 text-xs">Cruelty-Free</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center text-gray-400 text-xs pt-6 border-t border-gray-700">
+                <p>&copy; 2023 PureGlow Essentials. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+            // Inisialisasi AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-out-cubic'
+    });
+
+    // Smooth scroll untuk anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
